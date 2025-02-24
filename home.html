@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Secret Universe</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Inline CSS for demonstration -->
+  <style>
+    :root {
+      /* Sample color palette from your specs */
+      --color-primary: #f94144; 
+      --color-secondary: #f3722c;
+      --color-accent: #f8961e;
+      --color-bg: #ffffff;
+      --color-text: #000000;
+
+      --font-heading: 'Bebas Neue', serif;
+      --font-body: 'Montserrat', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 60px;
+      height: auto;
+      margin-right: 0.5rem;
+    }
+
+    .site-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    .join-btn {
+      background-color: var(--color-primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s;
+    }
+
+    .join-btn:hover {
+      background-color: var(--color-secondary);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--color-secondary);
+    }
+
+    .hero-images {
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Just placeholders for actual images */
+    .img-box {
+      width: 180px;
+      height: 280px;
+      background-color: #eee;
+      margin: 0 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* INFO SECTION (similar to the smaller block in the reference) */
+    .info-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .info-text {
+      flex: 1 1 400px;
+    }
+
+    .info-text h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+
+    .info-graphic {
+      flex: 1 1 400px;
+      background-color: #eee;
+      border-radius: 8px;
+      height: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .info-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-images, .info-text, .info-graphic {
+        flex: 1 1 auto;
+        margin: 0 auto;
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <!-- Website Logo -->
+      <img src="https://i.ibb.co/NbGBVKy/pixelcut-export.png" alt="Site Logo" />
+      <span class="site-title">SchoolSecret</span>
+    </div>
+    <nav>
+      <a href="#">Games</a>
+      <a href="#">Movies</a>
+      <a href="#">Anime</a>
+      <a href="#">Courses</a>
+      <a href="#">Magic</a>
+      <a href="#">Chat</a>
+    </nav>
+    <a href="#" class="join-btn">Join Us</a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Unleash Your Secret Powers</h1>
+      <p>
+        Welcome to your ultimate hub for hidden school secrets, free games, epic anime, and more. Dive in to discover the magic that lies within you!
+      </p>
+      <a href="#" class="cta-btn">Explore Now</a>
+    </div>
+    <div class="hero-images">
+      <!-- Replace these .img-box divs with actual images or placeholders -->
+      <div class="img-box"></div>
+      <div class="img-box"></div>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="info-section">
+    <div class="info-text">
+      <h2>Experience the Extraordinary</h2>
+      <p>
+        Our platform is designed to blend fun, learning, and a dash of the supernatural. Whether you’re into video games, movies, or discovering new magical abilities, we have something for everyone.
+      </p>
+      <p>
+        Stay tuned for monthly updates, secret events, and the chance to chat with AI bots or harness the powers of White and Black Magic!
+      </p>
+    </div>
+    <div class="info-graphic">
+      <!-- Placeholder for an image or infographic (video, illustration, etc.) -->
+    </div>
+  </section>
+
+</body>
+</html>
